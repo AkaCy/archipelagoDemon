@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CheckService } from '../check/check.service';
 
 @Component({
@@ -9,8 +9,13 @@ import { CheckService } from '../check/check.service';
 })
 export class Akaall {
   readonly checkService = inject(CheckService);
+  readonly duree = this.checkService.dureeAkaall;
 
   terminerCycle() {
     this.checkService.incrementer(1);
+  }
+
+  accelerer() {
+    this.checkService.accelererAkaall()
   }
 }

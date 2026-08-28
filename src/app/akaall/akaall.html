@@ -1,2 +1,5 @@
-<div class="barre-chargement" (animationiteration)="terminerCycle()">
+<div class="barre-chargement" [style.animation-duration]="duree() + 's'" (animationiteration)="terminerCycle()">
 </div>
+<button type="button" (click)="accelerer()">
+    Accélérer
+</button>
