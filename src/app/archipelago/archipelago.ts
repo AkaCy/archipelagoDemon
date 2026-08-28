@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './archipelago.html',
   styleUrl: './archipelago.css',
 })
-export class Archipelago {}
+export class Archipelago {
+  sendItem() {
+    // a comprendre comment envoyer un check mdr
+  }
+}
