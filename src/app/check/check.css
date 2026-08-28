@@ -4,3 +4,9 @@
     right: 1rem;
     z-index: 1000;
 }
+
+.compteur {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}

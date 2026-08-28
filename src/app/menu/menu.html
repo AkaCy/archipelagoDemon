@@ -1,0 +1,17 @@
+<nav class="menu" aria-label="Menu principal">
+    <button type="button" (click)="afficherOnglet('akaall')">
+        {{ onglets.akaall }}
+    </button>
+
+    <button type="button" (click)="afficherOnglet('archipelago')">
+        {{ onglets.archipelago }}
+    </button>
+</nav>
+
+@if (ongletActif() === 'akaall') {
+<app-akaall />
+}
+
+@if (ongletActif() === 'archipelago') {
+<app-archipelago />
+}

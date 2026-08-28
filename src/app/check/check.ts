@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-check',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './check.html',
   styleUrl: './check.css',
 })
-export class Check {}
+export class Check {
+  totalChecks = signal(0);
+
+  incrementer(value : number){
+    this.totalChecks.update(total => total + value);
+  }
+}
