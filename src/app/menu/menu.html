@@ -9,10 +9,10 @@
     </button>
 </nav>
 
-@if (ongletActif() === 'akaall') {
-<app-akaall />
-}
+<div class="contenu-onglet" [class.invisible]="ongletActif() !== 'akaall'">
+    <app-akaall />
+</div>
 
-@if (ongletActif() === 'archipelago') {
-<app-archipelago />
-}
+<div class="contenu-onglet" [class.invisible]="ongletActif() !== 'archipelago'">
+    <app-archipelago />
+</div>

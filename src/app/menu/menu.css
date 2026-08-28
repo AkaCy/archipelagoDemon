@@ -1,0 +1,9 @@
+.contenu-onglet {
+    position: relative;
+}
+
+.contenu-onglet.invisible {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+}
