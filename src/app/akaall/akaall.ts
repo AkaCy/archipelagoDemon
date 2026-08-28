@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CheckService } from '../check/check.service';
 
 @Component({
   selector: 'app-akaall',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './akaall.html',
   styleUrl: './akaall.css',
 })
-export class Akaall {}
+export class Akaall {
+  readonly checkService = inject(CheckService);
+
+  terminerCycle() {
+    this.checkService.incrementer(1);
+  }
+}

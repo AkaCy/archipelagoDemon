@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CheckService } from './check.service';
 
 @Component({
   selector: 'app-check',
@@ -7,9 +8,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './check.css',
 })
 export class Check {
-  totalChecks = signal(0);
-
-  incrementer(value : number){
-    this.totalChecks.update(total => total + value);
-  }
+  readonly checkService = inject(CheckService);
 }
